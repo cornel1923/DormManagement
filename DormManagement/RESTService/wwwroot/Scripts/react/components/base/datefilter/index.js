@@ -10,8 +10,8 @@ class DateFilter extends Component {
 
     this.state = {
       focusedInput: null,
-      startDate: Moment(),
-      endDate: Moment()
+      startDate: null,
+      endDate: null
     };
 
     this.dateFormat = "YYYY-MM-DD";

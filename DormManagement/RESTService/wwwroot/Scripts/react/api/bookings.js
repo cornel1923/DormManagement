@@ -1,5 +1,9 @@
 export default class BookingsApi {
   static createBooking(roomId, dateFrom, dateTo) {
+    if (dateFrom == null || dateTo == null) {
+      return new Promise(resolve => resolve("Date Range not valid"));
+    }
+
     return fetch("/booking/create", {
       method: "POST",
       headers: {

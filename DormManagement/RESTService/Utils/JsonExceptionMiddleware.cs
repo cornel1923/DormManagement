@@ -19,12 +19,10 @@ namespace DormManagement.Utils
                 return;
             }
 
-            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
 
             var error = new { exception.Message };
-
-            //Log.Error(exception);
-
+            
             context.Response.ContentType = "application/json";
 
             using (StreamWriter writer = new StreamWriter(context.Response.Body))

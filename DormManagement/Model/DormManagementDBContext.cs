@@ -10,6 +10,13 @@ namespace Model
         {
         }
 
-        public DbSet<RoomEntity> Rooms { get; set; }
+        public DormManagementContext()
+        {
+
+        }
+
+        public virtual DbSet<RoomEntity> Rooms { get; set; }
+
+        public virtual DbSet<BookingEntity> Bookings { get; set; }
     }
 }

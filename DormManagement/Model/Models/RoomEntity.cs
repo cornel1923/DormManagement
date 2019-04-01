@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Models
@@ -7,6 +8,10 @@ namespace Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long RoomId { get; set; }
+        public long Id { get; set; }
+
+        public short Places { get; set; }
+
+        public virtual ICollection<BookingEntity> Bookings { get; set; }
     }
 }

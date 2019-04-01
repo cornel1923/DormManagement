@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using Model;
-using Model.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -34,7 +33,7 @@ namespace DormManagement
                 options.ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning));
             });
 
-            services.AddTransient<IRoomBusinessLogic, RoomBusinessLogic>();
+            services.AddTransient<IDormBusinessLogic, DormBusinessLogic>();
             services.ConfigureRepository();
         }
 

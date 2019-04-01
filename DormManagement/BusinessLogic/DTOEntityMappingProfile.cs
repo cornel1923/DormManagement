@@ -9,6 +9,7 @@ namespace BusinessLogic
         public DTOEntityMappingProfile()
         {
             CreateMap<RoomEntity, RoomDTO>().ReverseMap();
+            CreateMap<BookingEntity, BookingDTO>();
         }
     }
 }

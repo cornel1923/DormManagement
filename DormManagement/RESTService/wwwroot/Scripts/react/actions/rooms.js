@@ -5,5 +5,5 @@ export const types = {
 };
 
 export const actions = {
-  getRooms: () => ({ type: types.ROOMS_REQUEST })
+  getRooms: (start, end) => ({ type: types.ROOMS_REQUEST, start, end })
 };

@@ -7,7 +7,7 @@ namespace BusinessLogic
     {
         public static void ConfigureRepository(this IServiceCollection services)
         {
-            services.AddTransient<IRoomRepository, RoomRepository>();
+            services.AddTransient<IDormRepository, DormRepository>();
         }
     }
 }

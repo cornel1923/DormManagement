@@ -2,6 +2,8 @@
 {
     public class RoomDTO
     {
-        public long RoomId { get; set; }
+        public long Id { get; set; }
+
+        public short Places { get; set; }
     }
 }

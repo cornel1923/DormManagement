@@ -3,9 +3,10 @@ import { mappRooms } from "./mappers";
 import { types as roomsActionTypes } from "../actions/rooms";
 import RoomsApi from "../api/rooms";
 
-export function* getRooms() {
+export function* getRooms(action) {
   try {
-    const data = yield call(RoomsApi.getRooms);
+    const data = yield call(RoomsApi.getRooms, action.start, action.end);
+
     const rooms = mappRooms(data);
 
     yield put({
